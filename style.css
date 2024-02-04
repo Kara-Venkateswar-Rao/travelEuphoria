@@ -1,0 +1,196 @@
+* {
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+
+html, body{
+ width: 100%;
+ height: 100%;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/66/7d/75/667d75eb4e4ce16bd89b262e27ed1c2d.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/**_______ nav start________ **/
+nav{
+    background-color: rgba(135, 207, 235, 0.219);
+    backdrop-filter: blur(0px);
+}
+.logo{
+   font-size: 50px;
+   color: black;
+   font-weight: 900;
+    font-family: 'Fuggles', cursive;
+    margin-right: 50px;
+}
+.nav-link{
+    color: black;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+}
+.nav-link:active{
+    color: #eee;
+}
+nav img{
+    height: 70px;
+    width: 70px;
+}
+.dropdown-menu{
+    background: #eeeeee8e;
+    backdrop-filter: blur(2px);
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    box-shadow: 0 5px 10px 0px  rgba(0, 0, 0, 0.637);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    z-index: 99;
+}
+.btn{
+    background: skyblue;
+    border: none;
+    margin-left: 5px;
+}
+.btn:hover{
+    background: lightblue;
+    box-shadow: -3px 3px 0px black;
+}
+
+/**______nav bar media query_____**/
+@media (max-width:1065px) {
+    nav .logo{
+        margin-right: 20px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+}
+@media (max-width:375px) {
+    .logo{
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    
+} 
+@media (max-width:991px) {
+    .nav-item{
+        text-align: center;
+    }
+    .btns{
+        display: flex;
+        align-items: center;
+    }
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-menu{
+        position: absolute;
+        margin-left: 50%;
+    }
+}
+    
+
+/**__________Seciton start__________**/
+section{
+    height: 100vh;
+    width: 100%;
+    background: #00000025;
+    backdrop-filter: blur(2px);
+    z-index: -99;
+    position: absolute;
+}
+section h1{
+    color: aqua;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 70px;
+    font-family: 'Work Sans', sans-serif;
+}
+h1::selection{
+    background-color:black;
+}
+p::selection{
+    background-color:black;
+}
+section p{
+    color: aqua;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Cedarville Cursive', cursive;
+}
+.changetext{
+    font-family: 'Fuggles', cursive;
+    font-size: 50px;
+    font-weight: 900;
+}
+.changetext::after{
+    content: "";
+    animation: changeanime 3s infinite;
+    transition: all ease 0.8s;
+}
+
+@keyframes changeanime {
+    0% {
+      content: "India";
+      color: orangered;
+      
+    }
+    20%{
+        content: "India";
+      color: orangered;
+    }
+    35% {
+      content: "Germany";
+      color: gold;
+    }
+    50% {
+      content: "United Kingdom";
+      color: rgb(0, 255, 110);
+    }
+    75% {
+      content: "Switzerland";
+      color: rgb(255, 0, 93);
+    }
+    90% {
+      content: "Australia";
+      color: #ebcd0e;
+    }
+    100%{
+        content: "Australia";
+      color: #ebcd0e;
+    }
+}
+
+.book{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:active{
+    scale: 0.98;
+    color: none;
+}
+  /**______end of section_____**/
+
+  /**____Section media querry____**/
+  @media (max-width:425px) {
+    section h1{
+        margin-top: 150px;
+        font-size: 26px;
+    }
+    section p{
+        font-size: 20px;
+    }
+  }
