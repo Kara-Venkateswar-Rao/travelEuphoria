@@ -97,8 +97,10 @@ nav img{
     scale: 0.95;
 
 }
+/**_________Nav end_____________**/
 
-/**______nav bar media query_____**/
+
+/**______nav bar media query start_____**/
 @media (max-width:1185px) {
     nav .logo{
         margin-right: 15px;
@@ -147,7 +149,7 @@ nav img{
     }
     
 } 
-
+/**______nav bar media query end_____**/
     
 
 /**__________Seciton start__________**/
@@ -245,11 +247,9 @@ section p{
 .new:hover{
     box-shadow: -2px 2px 1px rgba(135, 207, 235, 0.685);
 }
-
-
   /**______end of section_____**/
 
-  /**____Section media querry____**/
+  /**____Section media querry start____**/
   @media (max-width:425px) {
     section{
         height: 80vh;
@@ -262,3 +262,4 @@ section p{
         font-size: 20px;
     }
   }
+  /**____Section media querry end____**/
