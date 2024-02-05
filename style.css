@@ -91,7 +91,7 @@ nav img{
 }
 .btn:hover{
     background: lightblue;
-    box-shadow: -3px 3px 0px black;
+    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.281);
 }
 .btn:active{
     scale: 0.95;
