@@ -1,25 +1,35 @@
 * {
- margin: 0;
-padding: 0;
-box-sizing: border-box;
-text-decoration: none;
-list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 html, body{
- width: 100%;
- height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body{
-    background-image: url(https://i.pinimg.com/originals/66/7d/75/667d75eb4e4ce16bd89b262e27ed1c2d.jpg);
+    background-image: url(https://plus.unsplash.com/premium_photo-1661955570907-c03dae52b089?q=80&w=1478&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     object-fit: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
 }
+body::-webkit-scrollbar{
+    width: 5px;
+    background-color: black;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: aqua;
+    width: 5px;
+
+}
+
 /**_______ nav start________ **/
 nav{
-    background-color: rgba(135, 207, 235, 0.219);
+    background-color: #87cfeb38;
     backdrop-filter: blur(0px);
 }
 .logo{
@@ -35,51 +45,85 @@ nav{
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
 }
-.nav-link:active{
-    color: #eee;
+.nav-item{
+    margin-left: 20px;
+}
+.nav-item:hover{
+    background: rgba(173, 216, 230, 0.459);
+    border-radius: 2px;
 }
 nav img{
     height: 70px;
     width: 70px;
 }
 .dropdown-menu{
-    background: #eeeeee8e;
+    background: #87cfeb83;
     backdrop-filter: blur(2px);
 }
+.dropdown-item:active{
+    background-color: #eeeeee80;
+}
+
 .dropdown:hover .dropdown-menu{
     display: block;
     position: absolute;
-    box-shadow: 0 5px 10px 0px  rgba(0, 0, 0, 0.637);
+    box-shadow: 0 5px 10px 0px  rgba(112, 111, 111, 0.637);
     font-family: 'Work Sans', sans-serif;
     font-weight: 800;
     z-index: 99;
+}
+.navbar-toggler-icon:active{
+    border: none; 
+    outline: none;   
+}
+.navbar-toggler{
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
 }
 .btn{
     background: skyblue;
     border: none;
     margin-left: 5px;
+    transition: all ease .5s;
+    color: white;
+    font-weight: 500;
 }
 .btn:hover{
     background: lightblue;
     box-shadow: -3px 3px 0px black;
 }
+.btn:active{
+    scale: 0.95;
+
+}
 
 /**______nav bar media query_____**/
-@media (max-width:1065px) {
+@media (max-width:1185px) {
     nav .logo{
-        margin-right: 20px;
+        margin-right: 15px;
+    }
+    .btn{
+        font-size: 15px;
+    }
+    .nav-item{
+        margin-left: 10px;
+    }
+}
+@media (max-width:1081px) {
+    nav .logo{
+        margin-right: 15px;
     }
     .btn{
         font-size: 12px;
     }
-}
-@media (max-width:375px) {
-    .logo{
-        font-size: 35px;
-        margin-right: 10px;
+    .nav-item{
+        margin: 0;
     }
-    
-} 
+    .nav-link{
+        font-size: 18px;
+    }
+}
 @media (max-width:991px) {
     .nav-item{
         text-align: center;
@@ -96,24 +140,38 @@ nav img{
         margin-left: 50%;
     }
 }
+@media (max-width:375px) {
+    .logo{
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    
+} 
+
     
 
 /**__________Seciton start__________**/
 section{
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    background: #00000025;
-    backdrop-filter: blur(2px);
-    z-index: -99;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #0000004f;
+    z-index: -1;
+}
+.content{
+    position: absolute; 
+    margin-top: 100px;
+    z-index: 9;
 }
 section h1{
     color: aqua;
     text-align: center;
     font-size: 50px;
     font-weight: 900;
-    margin-top: 70px;
+    
     font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
 }
 h1::selection{
     background-color:black;
@@ -176,18 +234,28 @@ section p{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
+    position: absolute;
+}
+.new{
+    color: black;
+    border: 2px solid black;
+    padding: 5px 15px;
+}
+.new:hover{
+    box-shadow: -2px 2px 1px rgba(135, 207, 235, 0.685);
 }
 
-.btn:active{
-    scale: 0.98;
-    color: none;
-}
+
   /**______end of section_____**/
 
   /**____Section media querry____**/
   @media (max-width:425px) {
+    section{
+        height: 80vh;
+    }
     section h1{
-        margin-top: 150px;
+        margin-top: 60px;
         font-size: 26px;
     }
     section p{
