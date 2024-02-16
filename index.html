@@ -1,89 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Blue and Black Minimalist Travel Agency Logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="Blue and Black Minimalist Travel Agency Logo.png"
+      type="image/x-icon"
+    />
     <title>Travel Euphoria</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&family=Work+Sans:wght@100;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&family=Work+Sans:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logo" href="#"> <img src="Blue and Black Minimalist Travel Agency Logo.png" alt=""> Travel Euphoria</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Book</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Packages
-                  </a>
-                  <div class="dropdown-menu" >
-                    <a class="dropdown-item" href="#">India</a>
-                    <a class="dropdown-item" href="#">United State</a>
-                    <a class="dropdown-item" href="#">United Kingdom</a>
-                    <a class="dropdown-item" href="#">France</a>
-                    <a class="dropdown-item" href="#">Germany</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Galary</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="#">About</a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0 btns">
-                <button class="btn my-2 my-sm-0" type="submit">
-                  Login
-                </button>
-                <button class="btn my-2 my-sm-0" type="submit">
-                  Register Now
-                </button>
-              </form>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="#">
+        <img src="Blue and Black Minimalist Travel Agency Logo.png" alt="" />
+        Travel Euphoria</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Book</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Packages
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">India</a>
+              <a class="dropdown-item" href="#">United State</a>
+              <a class="dropdown-item" href="#">United Kingdom</a>
+              <a class="dropdown-item" href="#">France</a>
+              <a class="dropdown-item" href="#">Germany</a>
             </div>
-          </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Galary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 btns">
+          <button class="btn my-2 my-sm-0" type="submit">Login</button>
+          <button class="btn my-2 my-sm-0" type="submit">Register Now</button>
+        </form>
+      </div>
     </nav>
     <!-- end of nav -->
 
     <!--srart of first section -->
-    <section>
+    <section id="page1">
       <div class="content">
-        <h1>Welcome To The World <i class="fa-solid fa-earth-americas"></i></h1>
-        <p><i class="fa-solid fa-location-dot"></i>  Travel With Euphoria  <i class="fa-solid fa-location-dot"></i></p>
-        <p>Visit Your Favourite Places <br><span class="changetext"></span> </p>
+        <h1>Welcome To The World <i class="fa-solid fa-earth-americas world"></i></h1>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Travel With Euphoria
+          <i class="fa-solid fa-location-dot"></i>
+        </p>
+        <p>
+          Visit Your Favourite Places <br /><span class="changetext"></span>
+        </p>
 
         <div class="book">
           <button class="btn my-2 my-sm-0 new" type="submit">Book Now</button>
         </div>
       </div>
-        
     </section>
 
-</body>
+    <section id="page2">
+      <div id="bookings">
+        <div class="brand-logo">
+          <img src="Travel_Agency_Logo-removebg.png" alt="" />
+        </div>
+        <div class="booking-info">
+          <form action="">
+            <label for="exampleDataList" class="form-label">Where to</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." required >
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+            </datalist>
+          
+          <label for="">How many person</label>
+          <select class="form-select filled" aria-label="Default select example">
+            <option selected>Click to select</option>
+            <option value=" " >One</option>
+            <option value=" " >Two</option>
+            <option value=" " >Three</option>
+          </select>
+
+          <label for="">Start date</label>
+          <input class="filled" type="date" value="" name="" id="" required>
+
+          <label for="">End date</label>
+          <input class="filled" type="date" value="" name="" id="" required>
+
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" rows="1" minlength="50" maxlength="500"></textarea>
+            <label for="floatingTextarea">Comments</label>
+          </div>
+          <div>
+          <input class="book-btn filled" type="submit" value="Book Now"> 
+          </div>
+        </div> 
+      </form>
+      </div>
+    </section>
+
+    <section id="page3" >
+      <div id="package">
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit Ayodha</h5>
+          <p class="card-text"> The Ram Mandir is a Hindu temple in Ayodhya, Uttar Pradesh, India. Many Hindus believe that the mythical birthplace of Rama, a principal deity of Hinduism. </p>
+          <p class="price">Price: $1500</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>           
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.DB8eOk1y4SdWgM7GqkCx2gHaE7?pid=ImgDet&w=384&h=256&rs=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit France</h5>
+          <p class="card-text"> France has 45 sites inscribed in the UNESCO's World Heritage List and features cities or sites of high cultural interest, Paris is being the foremost, but also Loire Valley,</p>
+          <p class="price">Price: $1000</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>           
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=384&h=256&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Taj Mahal Agra</h5>
+          <p class="card-text"> The Taj Mahal is an ivory-white marble mausoleum situated on the southern bank of the Yamuna River in the city of Agra, Uttar Pradesh, India.</p>
+          <p class="price">Price: $800</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+           
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://journeyz.co/wp-content/uploads/2020/08/Basel-2048x1365.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit Switzerland</h5>
+          <p class="card-text"> Switzerland, a land of stunning natural beauty, beckons travelers with its majestic mountains, serene lakes, and charming villages.  </p>
+          <p class="price">Price: $1200</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.thewowstyle.com/wp-content/uploads/2015/03/Chicago-Illinois.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit United-State</h5>
+          <p class="card-text"> The United States is a vast and diverse country with an abundance of captivating tourist destinations.Let’s explore some of the most iconic ones:</p>
+          <p class="price">Price: $2500</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://lp-cms-production.imgix.net/2021-06/GettyRF_465892570.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit Gernamy</h5>
+          <p class="card-text"> Germany, or Deutschland as the locals call it, is a captivating country with a rich tapestry of history, culture, and natural beauty. </p>
+          <p class="price">Price: $900</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+           
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit India</h5>
+          <p class="card-text"> India, a land of diverse landscapes, offers a plethora of captivating tourist destinations. Here are some remarkable places to explore:</p>
+          <p class="price">Price: $2500</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>           
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.SPdTDr-xJh5tA9tGYkK48gHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit Australia</h5>
+          <p class="card-text"> Popular Australian destinations include the coastal cities of Sydney, Brisbane and Melbourne, as well as other high-profile.</p>
+          <p class="price">Price: $3500</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.9FHZ19x0A-4-yJfTMblEPwHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visit NewYork</h5>
+          <p class="card-text"> New York is a vibrant state in the United States, known for its iconic city, diverse culture, and stunning natural beauty. </p>
+          <p class="price">Price: $4500</p>
+          <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+    <section id="page4">
+
+    </section>
+
+    <script src="logic.js"></script>
+  </body>
 </html>
