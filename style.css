@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   overflow-x: hidden;
   object-fit: cover;
+  position: relative;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -35,6 +36,7 @@ body::-webkit-scrollbar-thumb {
 nav {
   background-color: #87cfeb38;
   backdrop-filter: blur(0px);
+  position: absolute;
 }
 .logo {
   font-size: 50px;
@@ -415,6 +417,7 @@ label {
   color: black;
 }
 .card {
+  margin-right: 25px;
   padding: 2px;
   box-shadow: 0px 2px 5px black;
   display: flex;
