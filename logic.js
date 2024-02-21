@@ -1,13 +1,14 @@
-const filled = document.querySelector(".filled");
+const first = document.querySelector(".first-input");
+const second = document.querySelector(".second-input");
+const third = document.querySelector(".third-input");
+const forth = document.querySelector(".fourth-input");
+const fifth = document.querySelector(".fifth-input");
 
 
-const massage = () =>{
-   
-        if(filled.required === true){
-            alert("booking successfull")
-        }
-        console.log(filled.required);
-    
+
+function onSubmit() {
+  if (first.value !== "" && second.value !== "" && third.value !== "" && forth.value !== "" && fifth.value !== "") {
+    alert("Booking Successfull");
+  }
 }
-    
- 
+

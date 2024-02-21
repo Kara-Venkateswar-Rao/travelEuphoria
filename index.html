@@ -144,35 +144,40 @@
         <div class="booking-info">
           <form action="">
             <label for="exampleDataList" class="form-label">Where to</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." required >
-            <datalist id="datalistOptions">
-              <option value="San Francisco">
-              <option value="New York">
-              <option value="Seattle">
-              <option value="Los Angeles">
-              <option value="Chicago">
-            </datalist>
+            <select class="form-select first-input" aria-label="Default select example" required>
+              <option value="">Select where you want to go</option>
+              <option value="India" >India</option>
+              <option value="Ayodha">Ayodha</option>
+              <option value="France">France</option>
+              <option value="Taj Mahal">Taj Mahal</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="United-State">United-State</option>
+              <option value="Gernamy">Gernamy</option>
+              <option value="Australia">Australia</option>
+              <option value="NewYork">NewYork</option>
+            </select>
           
           <label for="">How many person</label>
-          <select class="form-select filled" aria-label="Default select example">
-            <option selected>Click to select</option>
-            <option value=" " >One</option>
-            <option value=" " >Two</option>
-            <option value=" " >Three</option>
+          <select class="form-select second-input" aria-label="Default select example" required>
+            <option value="">Click to select</option>
+            <option value="1" >One</option>
+            <option value="2" >Two</option>
+            <option value="3" >Three</option>
           </select>
 
           <label for="">Start date</label>
-          <input class="filled" type="date" value="" name="" id="" required>
+          <input class="fourth-input" type="date" value="" name="" id="" required>
 
           <label for="">End date</label>
-          <input class="filled" type="date" value="" name="" id="" required>
+          <input class="third-input" type="date" value="" name="" id="" required>
 
           <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" rows="1" minlength="50" maxlength="500"></textarea>
-            <label for="floatingTextarea">Comments</label>
+            <label for="floatingTextarea">Description</label>
+            <textarea class="form-control fifth-input"  placeholder="Leave a comment here" id="floatingTextarea" rows="1" minlength="5" maxlength="500" required></textarea>
+            
           </div>
           <div>
-          <input class="book-btn filled" type="submit" value="Book Now"> 
+          <button onclick="onSubmit()" type="submit" class="book-btn">Book Now</button>
           </div>
         </div> 
       </form>
@@ -180,6 +185,7 @@
     </section>
 
     <section id="page3" >
+      <h2 class="gallery-heading">Package Gallery</h2>
       <div id="package">
       <div class="card" style="width: 18rem;">
         <img src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg" class="card-img-top" alt="...">
@@ -333,7 +339,41 @@
 </section>
 
     <section id="page4">
+      <h2 class="gallery-heading">Value Added Services</h2>
+      <div class="service-container">
+        <div class="service">
+          <!-- hotels -->
+         <p class=""><span><i class="fa-solid fa-hotel"></i></span> Accommodation is one of the most essential service offered in the tourism industry. Hotels, resorts, motels, lodges, and hostels are some of the options available for travelers to choose from. These accommodations provide comfortable living spaces with various amenities such as room service, Wi-Fi connectivity, swimming pools, spas, and fitness centers.</p>
+        </div>
+        <div class="service">
+          <!-- Foods and drinks -->
+          
+          <p> <span><i class="fa-solid fa-utensils"></i></span> Food is an integral part of any trip or vacation. The tourism industry provides various food services such as restaurants, cafes, food trucks, and street food vendors. These food services cater to different cuisines and dietary requirements. only on particular travel packages**.</p>
+        </div>
+        <div class="service">
+          <!-- Insurance -->
+          
+          <p> <span><i class="fa-solid fa-user-shield"></i></span> Get the best travel Insurence provided by us including flight missing, baggage missing, accidents, medical emergencies and so on.</p>
+        </div>
+        <div class="service">
+          <!-- door step services -->
+          
+          <p> <span><i class="fa-solid fa-house-flag"></i></span> Finding out time from the busy schedules to submit or collect documents is challenging. But here at Travel Euphoria. you don't even have to step your foot into our office. From collection of documents to delivery, all is delivered at your doorstep to make your life easy and traveling experience pleasantly unforgettable.</p>
+        </div>
+        <div class="service">
+          <!-- live support -->
+          
+       
+          <p> <span><i class="fa-solid fa-phone-volume"></i></span> Being available 24/7 for our prestigious clients in what we aim for where all your concerns are taken care of until you are 100% satisfied.</p>
+    
+        </div>
+        <div class="service">
+          <!-- car services -->
+         
+          <p> <span> <i class="fa-solid fa-car"></i></span> One of the most crucial aspects of any trip is transportation. The tourism industry offers various modes of transportation such as air travel, rail travel, road travel, and water travel. The airline industry is an integral part of the tourism industry as it connects people from different parts of the world.</p>
+        </div>
 
+      </div>
     </section>
 
     <script src="logic.js"></script>

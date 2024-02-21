@@ -17,8 +17,8 @@ body {
 
   background-position: top;
   background-repeat: no-repeat;
-  object-fit: cover;
   overflow-x: hidden;
+  object-fit: cover;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -171,14 +171,14 @@ nav img {
   margin-top: 140px;
   z-index: 1;
 }
-section h1{
+section h1 {
   color: aqua;
   text-align: center;
   font-size: 50px;
   font-weight: 900;
   font-family: "Work Sans", sans-serif;
 }
-.world{
+.world {
   color: aqua;
 }
 h1::selection {
@@ -271,9 +271,8 @@ section p {
 }
 /**____Section media querry end____**/
 
-/**_______Sectiohn 2_________**/
+/**_______Sectiohn2/ page2_________**/
 #page2 {
-  height: 100vh;
   display: flex;
   padding: 20px;
   background-color: black;
@@ -288,6 +287,7 @@ section p {
   align-items: center;
   border-radius: 10px;
   padding: 25px;
+  gap: 20px;
 }
 .brand-logo {
   width: 50%;
@@ -295,7 +295,6 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
   box-shadow: -1px 0px 5px black;
   background-color: #87cfeb38;
   border-radius: 5px;
@@ -308,28 +307,32 @@ section p {
   border-radius: 5px;
 }
 .booking-info {
-  width: 45%;
+  width: 50%;
   height: 100%;
-  padding: 10px;
   border: 1 px solid black;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
   box-shadow: -1px 0px 5px black;
-  border-radius: 2px;
+  border-radius: 5px;
   overflow-x: hidden;
+  padding: 20px;
 }
 select {
   width: 100%;
+  height: 30px;
   outline: none;
   border: grey;
   border-radius: 5px;
   background-color: aqua;
 }
+.form-floating textarea{
+  height: 50px;
+}
 .form-control,
 input {
   width: 100%;
+  height: 30px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -339,19 +342,61 @@ label {
   margin-top: 10px;
 }
 .book-btn {
-  /* margin-top: 30px; */
+  margin-top: 30px;
   height: 30px;
   width: 100px;
   cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(206, 230, 252);
+  transition: all ease 0.5s;
+}
+.book-btn:hover{
+  box-shadow: -2px 2px black;
 }
 .form-floating {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/**_________page2/ section2 Ends here_______**/
+
+/**___________Media query for page2 starts here__________**/
+@media (max-width: 650px) {
+  #bookings {
+    width: 100%;
+    height: 100%;
+    background-color: #87cfeb83;
+    box-shadow: 0px 0px 5px #c5c5c5;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .brand-logo {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .booking-info {
+    width: 100%;
+    height: 140%;
+    padding: 10px;
+  }
+}
+/**_____Media Quary for page2 ends here______**/
+
+/**__________________Page3/ section3 starts here_____________**/
 #page3 {
   width: 100vw;
-  padding: 50px;
+  padding: 30px;
   background-color: #c5c5c5;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 #package {
   height: inherit;
@@ -361,6 +406,7 @@ label {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
+  overflow: hidden;
 }
 .card-text {
   font-family: "Courier New", Courier, monospace;
@@ -369,16 +415,16 @@ label {
   color: black;
 }
 .card {
-    padding: 2px;
+  padding: 2px;
   box-shadow: 0px 2px 5px black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.card-body{
-    padding: 10px;
+.card-body {
+  padding: 10px;
 }
-.price{
+.price {
   font-family: "Courier New", Courier, monospace;
   text-align: left;
   font-size: 17px;
@@ -386,9 +432,115 @@ label {
   font-weight: 700;
   margin: 0;
 }
-.star{
+.star {
   color: goldenrod;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 12px;
+}
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.gallery-heading::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50%; 
+  background-color: black;
+  margin-top: 30px;
+}
+/**________page3 ends here_______**/
+
+/**_____Page3 media quary starts here_______**/
+@media (max-width:650px) {
+  .gallery-heading{
+    text-align: left;
+    font-size: 20px;
+  }
+  .gallery-heading::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%; 
+    background-color: black;
+    margin-top: 20px;
+  }
+}
+/**____Page3 media quary ends here_____**/
+
+/**________Page4 starts here_______**/
+#page4{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://indiacityblog.com/wp-content/uploads/2020/03/185289.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+#page4 .gallery-heading{
+  background-color: black;
+  margin-bottom: 0;
+  color: whitesmoke;
+  height: 80px;
+  /* line-height: 80px; */
+  padding: 25px;
+}
+#page4 .gallery-heading::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%; 
+  background-color: whitesmoke;
+  /* margin-top: 50px; */
+}
+.service-container{
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 25px;
+  background-color: rgba(0, 0, 0, 0.178);  
+}
+.service{
+  width: 47%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.295);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  display: flex;
+  text-wrap: wrap;
+  
+  
+}
+.service p{
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 100;
+}
+.service i{
+  color: aqua;
+  font-size: 35px;
+}
+
+@media (max-width:650px) {
+  #page4 .gallery-heading{
+    background-color: black;
+    margin-bottom: 0;
+    color: whitesmoke;
+    height: 80px;
+    font-size: 20px;
+  }
+  .service-container{
+    padding: 10px;
+  }
+  .service{
+    width: 100vw;
+  }
 }
