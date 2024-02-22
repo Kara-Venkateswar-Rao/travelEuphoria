@@ -7,8 +7,7 @@ const fifth = document.querySelector(".fifth-input");
 
 
 function onSubmit() {
-  if (first.value !== "" && second.value !== "" && third.value !== "" && forth.value !== "" && fifth.value !== "") {
+  if (first.value !== "" && second.value !== "" && third.value !== "" && forth.value !== "" && fifth.value !== "" && fifth.value.length > 49 ) {
     alert("Booking Successfull");
   }
 }
-

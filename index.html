@@ -54,6 +54,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- nav start here -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand logo" href="#">
         <img src="Blue and Black Minimalist Travel Agency Logo.png" alt="" />
@@ -111,8 +112,23 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0 btns">
-          <button class="btn my-2 my-sm-0" type="submit">Login</button>
-          <button class="btn my-2 my-sm-0" type="submit">Register Now</button>
+          <button
+            class="btn my-2 my-sm-0"
+            type="submit"
+            data-toggle="modal"
+            data-target="#login-model"
+          >
+            Login
+          </button>
+
+          <button
+            class="btn my-2 my-sm-0"
+            type="submit"
+            data-toggle="modal"
+            data-target="#signin-model"
+          >
+            Register Now
+          </button>
         </form>
       </div>
     </nav>
@@ -121,7 +137,9 @@
     <!--srart of first section -->
     <section id="page1">
       <div class="content">
-        <h1>Welcome To The World <i class="fa-solid fa-earth-americas world"></i></h1>
+        <h1>
+          Welcome To The World <i class="fa-solid fa-earth-americas world"></i>
+        </h1>
         <p>
           <i class="fa-solid fa-location-dot"></i> Travel With Euphoria
           <i class="fa-solid fa-location-dot"></i>
@@ -135,7 +153,9 @@
         </div>
       </div>
     </section>
+    <!-- end of first section -->
 
+    <!-- start of page2 -->
     <section id="page2">
       <div id="bookings">
         <div class="brand-logo">
@@ -144,9 +164,13 @@
         <div class="booking-info">
           <form action="">
             <label for="exampleDataList" class="form-label">Where to</label>
-            <select class="form-select first-input" aria-label="Default select example" required>
+            <select
+              class="form-select first-input"
+              aria-label="Default select example"
+              required
+            >
               <option value="">Select where you want to go</option>
-              <option value="India" >India</option>
+              <option value="India">India</option>
               <option value="Ayodha">Ayodha</option>
               <option value="France">France</option>
               <option value="Taj Mahal">Taj Mahal</option>
@@ -156,225 +180,374 @@
               <option value="Australia">Australia</option>
               <option value="NewYork">NewYork</option>
             </select>
-          
-          <label for="">How many person</label>
-          <select class="form-select second-input" aria-label="Default select example" required>
-            <option value="">Click to select</option>
-            <option value="1" >One</option>
-            <option value="2" >Two</option>
-            <option value="3" >Three</option>
-          </select>
 
-          <label for="">Start date</label>
-          <input class="fourth-input" type="date" value="" name="" id="" required>
+            <label for="">How many person</label>
+            <select
+              class="form-select second-input"
+              aria-label="Default select example"
+              required
+            >
+              <option value="">Click to select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
 
-          <label for="">End date</label>
-          <input class="third-input" type="date" value="" name="" id="" required>
+            <label for="">Start date</label>
+            <input
+              class="fourth-input"
+              type="date"
+              value=""
+              name=""
+              id=""
+              required
+            />
 
-          <div class="form-floating">
-            <label for="floatingTextarea">Description</label>
-            <textarea class="form-control fifth-input"  placeholder="Leave a comment here" id="floatingTextarea" rows="1" minlength="5" maxlength="500" required></textarea>
-            
-          </div>
-          <div>
-          <button onclick="onSubmit()" type="submit" class="book-btn">Book Now</button>
-          </div>
-        </div> 
-      </form>
+            <label for="">End date</label>
+            <input
+              class="third-input"
+              type="date"
+              value=""
+              name=""
+              id=""
+              required
+            />
+
+            <div class="form-floating">
+              <label for="floatingTextarea">Description</label>
+              <textarea
+                class="form-control fifth-input"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+                rows="1"
+                minlength="50"
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button onclick="onSubmit()" type="submit" class="book-btn">
+                Book Now
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+    <!-- end of page2 -->
 
-    <section id="page3" >
+    <!-- page3 starts hete -->
+    <section id="page3">
       <h2 class="gallery-heading">Package Gallery</h2>
       <div id="package">
-      <div class="card" style="width: 18rem;">
-        <img src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit Ayodha</h5>
-          <p class="card-text"> The Ram Mandir is a Hindu temple in Ayodhya, Uttar Pradesh, India. Many Hindus believe that the mythical birthplace of Rama, a principal deity of Hinduism. </p>
-          <p class="price">Price: $1500</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>           
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Ayodha</h5>
+            <p class="card-text">
+              The Ram Mandir is a Hindu temple in Ayodhya, Uttar Pradesh, India.
+              Many Hindus believe that the mythical birthplace of Rama, a
+              principal deity of Hinduism.
+            </p>
+            <p class="price">Price: $1500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
           </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.DB8eOk1y4SdWgM7GqkCx2gHaE7?pid=ImgDet&w=384&h=256&rs=1"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit France</h5>
+            <p class="card-text">
+              France has 45 sites inscribed in the UNESCO's World Heritage List
+              and features cities or sites of high cultural interest, Paris is
+              being the foremost, but also Loire Valley,
+            </p>
+            <p class="price">Price: $1000</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=384&h=256&c=7&r=0&o=5&pid=1.7"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Taj Mahal Agra</h5>
+            <p class="card-text">
+              The Taj Mahal is an ivory-white marble mausoleum situated on the
+              southern bank of the Yamuna River in the city of Agra, Uttar
+              Pradesh, India.
+            </p>
+            <p class="price">Price: $800</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://journeyz.co/wp-content/uploads/2020/08/Basel-2048x1365.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Switzerland</h5>
+            <p class="card-text">
+              Switzerland, a land of stunning natural beauty, beckons travelers
+              with its majestic mountains, serene lakes, and charming villages.
+            </p>
+            <p class="price">Price: $1200</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.thewowstyle.com/wp-content/uploads/2015/03/Chicago-Illinois.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit United-State</h5>
+            <p class="card-text">
+              The United States is a vast and diverse country with an abundance
+              of captivating tourist destinations.Let’s explore some of the most
+              iconic ones:
+            </p>
+            <p class="price">Price: $2500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://lp-cms-production.imgix.net/2021-06/GettyRF_465892570.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Gernamy</h5>
+            <p class="card-text">
+              Germany, or Deutschland as the locals call it, is a captivating
+              country with a rich tapestry of history, culture, and natural
+              beauty.
+            </p>
+            <p class="price">Price: $900</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit India</h5>
+            <p class="card-text">
+              India, a land of diverse landscapes, offers a plethora of
+              captivating tourist destinations. Here are some remarkable places
+              to explore:
+            </p>
+            <p class="price">Price: $2500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.SPdTDr-xJh5tA9tGYkK48gHaE8?rs=1&pid=ImgDetMain"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Australia</h5>
+            <p class="card-text">
+              Popular Australian destinations include the coastal cities of
+              Sydney, Brisbane and Melbourne, as well as other high-profile.
+            </p>
+            <p class="price">Price: $3500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.9FHZ19x0A-4-yJfTMblEPwHaE8?rs=1&pid=ImgDetMain"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit NewYork</h5>
+            <p class="card-text">
+              New York is a vibrant state in the United States, known for its
+              iconic city, diverse culture, and stunning natural beauty.
+            </p>
+            <p class="price">Price: $4500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://th.bing.com/th/id/OIP.DB8eOk1y4SdWgM7GqkCx2gHaE7?pid=ImgDet&w=384&h=256&rs=1" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit France</h5>
-          <p class="card-text"> France has 45 sites inscribed in the UNESCO's World Heritage List and features cities or sites of high cultural interest, Paris is being the foremost, but also Loire Valley,</p>
-          <p class="price">Price: $1000</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>           
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=384&h=256&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Taj Mahal Agra</h5>
-          <p class="card-text"> The Taj Mahal is an ivory-white marble mausoleum situated on the southern bank of the Yamuna River in the city of Agra, Uttar Pradesh, India.</p>
-          <p class="price">Price: $800</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-           
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://journeyz.co/wp-content/uploads/2020/08/Basel-2048x1365.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit Switzerland</h5>
-          <p class="card-text"> Switzerland, a land of stunning natural beauty, beckons travelers with its majestic mountains, serene lakes, and charming villages.  </p>
-          <p class="price">Price: $1200</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://www.thewowstyle.com/wp-content/uploads/2015/03/Chicago-Illinois.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit United-State</h5>
-          <p class="card-text"> The United States is a vast and diverse country with an abundance of captivating tourist destinations.Let’s explore some of the most iconic ones:</p>
-          <p class="price">Price: $2500</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://lp-cms-production.imgix.net/2021-06/GettyRF_465892570.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit Gernamy</h5>
-          <p class="card-text"> Germany, or Deutschland as the locals call it, is a captivating country with a rich tapestry of history, culture, and natural beauty. </p>
-          <p class="price">Price: $900</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-           
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit India</h5>
-          <p class="card-text"> India, a land of diverse landscapes, offers a plethora of captivating tourist destinations. Here are some remarkable places to explore:</p>
-          <p class="price">Price: $2500</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>           
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://th.bing.com/th/id/OIP.SPdTDr-xJh5tA9tGYkK48gHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit Australia</h5>
-          <p class="card-text"> Popular Australian destinations include the coastal cities of Sydney, Brisbane and Melbourne, as well as other high-profile.</p>
-          <p class="price">Price: $3500</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="https://th.bing.com/th/id/OIP.9FHZ19x0A-4-yJfTMblEPwHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Visit NewYork</h5>
-          <p class="card-text"> New York is a vibrant state in the United States, known for its iconic city, diverse culture, and stunning natural beauty. </p>
-          <p class="price">Price: $4500</p>
-          <div class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <a href="#" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-    
-    </div>
-  </div>
-</section>
+    </section>
+    <!-- page3 ends here -->
 
+    <!-- page4 starts here -->
     <section id="page4">
       <h2 class="gallery-heading">Value Added Services</h2>
       <div class="service-container">
         <div class="service">
           <!-- hotels -->
-         <p class=""><span><i class="fa-solid fa-hotel"></i></span> Accommodation is one of the most essential service offered in the tourism industry. Hotels, resorts, motels, lodges, and hostels are some of the options available for travelers to choose from. These accommodations provide comfortable living spaces with various amenities such as room service, Wi-Fi connectivity, swimming pools, spas, and fitness centers.</p>
+          <p class="">
+            <span><i class="fa-solid fa-hotel"></i></span> Accommodation is one
+            of the most essential service offered in the tourism industry.
+            Hotels, resorts, motels, lodges, and hostels are some of the options
+            available for travelers to choose from. These accommodations provide
+            comfortable living spaces with various amenities such as room
+            service, Wi-Fi connectivity, swimming pools, spas, and fitness
+            centers.
+          </p>
         </div>
         <div class="service">
           <!-- Foods and drinks -->
-          
-          <p> <span><i class="fa-solid fa-utensils"></i></span> Food is an integral part of any trip or vacation. The tourism industry provides various food services such as restaurants, cafes, food trucks, and street food vendors. These food services cater to different cuisines and dietary requirements. only on particular travel packages**.</p>
+
+          <p>
+            <span><i class="fa-solid fa-utensils"></i></span> Food is an
+            integral part of any trip or vacation. The tourism industry provides
+            various food services such as restaurants, cafes, food trucks, and
+            street food vendors. These food services cater to different cuisines
+            and dietary requirements. only on particular travel packages**.
+          </p>
         </div>
         <div class="service">
           <!-- Insurance -->
-          
-          <p> <span><i class="fa-solid fa-user-shield"></i></span> Get the best travel Insurence provided by us including flight missing, baggage missing, accidents, medical emergencies and so on.</p>
+
+          <p>
+            <span><i class="fa-solid fa-user-shield"></i></span> Get the best
+            travel Insurence provided by us including flight missing, baggage
+            missing, accidents, medical emergencies and so on.
+          </p>
         </div>
         <div class="service">
           <!-- door step services -->
-          
-          <p> <span><i class="fa-solid fa-house-flag"></i></span> Finding out time from the busy schedules to submit or collect documents is challenging. But here at Travel Euphoria. you don't even have to step your foot into our office. From collection of documents to delivery, all is delivered at your doorstep to make your life easy and traveling experience pleasantly unforgettable.</p>
+
+          <p>
+            <span><i class="fa-solid fa-house-flag"></i></span> Finding out time
+            from the busy schedules to submit or collect documents is
+            challenging. But here at Travel Euphoria. you don't even have to
+            step your foot into our office. From collection of documents to
+            delivery, all is delivered at your doorstep to make your life easy
+            and traveling experience pleasantly unforgettable.
+          </p>
         </div>
         <div class="service">
           <!-- live support -->
-          
-       
-          <p> <span><i class="fa-solid fa-phone-volume"></i></span> Being available 24/7 for our prestigious clients in what we aim for where all your concerns are taken care of until you are 100% satisfied.</p>
-    
+
+          <p>
+            <span><i class="fa-solid fa-phone-volume"></i></span> Being
+            available 24/7 for our prestigious clients in what we aim for where
+            all your concerns are taken care of until you are 100% satisfied.
+          </p>
         </div>
         <div class="service">
           <!-- car services -->
-         
-          <p> <span> <i class="fa-solid fa-car"></i></span> One of the most crucial aspects of any trip is transportation. The tourism industry offers various modes of transportation such as air travel, rail travel, road travel, and water travel. The airline industry is an integral part of the tourism industry as it connects people from different parts of the world.</p>
-        </div>
 
+          <p>
+            <span> <i class="fa-solid fa-car"></i></span> One of the most
+            crucial aspects of any trip is transportation. The tourism industry
+            offers various modes of transportation such as air travel, rail
+            travel, road travel, and water travel. The airline industry is an
+            integral part of the tourism industry as it connects people from
+            different parts of the world.
+          </p>
+        </div>
       </div>
     </section>
+    <!-- page4 ends here -->
+
+    <!-- login section -->
+    <div class="modal" id="login-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">loging form</div>
+          <div class="modal-body">form login data will be here</div>
+        </div>
+      </div>
+    </div>
+    <!-- signin section -->
+    <div class="modal" id="signin-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">signin form</div>
+          <div class="modal-body">signin data will be here</div>
+        </div>
+      </div>
+    </div>
 
     <script src="logic.js"></script>
   </body>
