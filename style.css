@@ -5,6 +5,10 @@
   text-decoration: none;
   list-style: none;
 }
+*::selection {
+  background-color: #000000;
+  color: cyan;
+}
 
 html,
 body {
@@ -31,6 +35,59 @@ body::-webkit-scrollbar-thumb {
   width: 5px;
   border-radius: 10px;
 }
+/**________Up arrow starts________**/
+#go-up {
+  background-color: rgba(135, 207, 235, 0.527);
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  margin-left: 95%;
+  margin-top: 70vh;
+  box-shadow: 0px 5px 10px #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 99;
+  transition: all ease 0.5s;
+  border: 2px solid snow;
+}
+#go-up i {
+  font-size: 30px;
+  color: #000000;
+}
+#go-up:hover {
+  background-color: #87cfebe8;
+  border: 2px solid #292929;
+}
+@media (max-width: 910px) {
+  #go-up {
+    background-color: rgba(135, 207, 235, 0.527);
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    margin-left: 92%;
+    margin-top: 70vh;
+    box-shadow: 0px 5px 10px #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 99;
+    transition: all ease 0.5s;
+    border: 2px solid snow;
+  }
+
+}
+@media (max-width:650px) {
+  #go-up{
+    
+    position: fixed;
+    margin-left: 85%;
+    margin-top: 65vh;
+  }
+}
+/**________Up arrow ends_________**/
 
 /**_______ nav start________ **/
 nav {
@@ -64,7 +121,9 @@ nav img {
 }
 .dropdown-menu {
   background: #87cfeb83;
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 99;
 }
 .dropdown-item:hover {
   background-color: #eeeeee94;
@@ -165,13 +224,32 @@ nav img {
   justify-content: center;
   background-color: #0000004f;
   z-index: -1;
-  position: relative;
 }
 .content {
-  height: 100vh;
-  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
   margin-top: 140px;
-  z-index: 1;
+}
+.content .new {
+  outline: none;
+  border: 2px solid whitesmoke;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #29292979;
+  color: #fff;
+  transition: all ease 0.5s;
+  text-decoration: none;
+}
+.new:hover {
+  box-shadow: -2px 2px 1px rgba(135, 207, 235, 0.479);
+  color: #000000;
+  font-weight: 700;
+  background-color: rgba(135, 207, 235, 0.644);
 }
 section h1 {
   color: aqua;
@@ -179,6 +257,7 @@ section h1 {
   font-size: 50px;
   font-weight: 900;
   font-family: "Work Sans", sans-serif;
+  /* cursor: pointer; */
 }
 .world {
   color: aqua;
@@ -236,26 +315,6 @@ section p {
     content: "Australia";
     color: #ebcd0e;
   }
-}
-
-.book {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-  position: absolute;
-}
-.new {
-  position: relative;
-  color: white;
-  border: 2px solid #c5c5c5;
-  padding: 5px 15px;
-}
-.new:hover {
-  box-shadow: -2px 2px 1px rgba(135, 207, 235, 0.479);
-  color: black;
-  font-weight: 600;
 }
 /**______end of section_____**/
 
@@ -329,7 +388,7 @@ select {
   border-radius: 5px;
   background-color: aqua;
 }
-.form-floating textarea{
+.form-floating textarea {
   height: 50px;
 }
 .form-control,
@@ -355,7 +414,7 @@ label {
   background-color: rgb(206, 230, 252);
   transition: all ease 0.5s;
 }
-.book-btn:hover{
+.book-btn:hover {
   box-shadow: -2px 2px black;
 }
 .form-floating {
@@ -445,21 +504,21 @@ label {
 .gallery-heading {
   text-align: center;
   margin-bottom: 20px;
-color: whitesmoke;
+  color: whitesmoke;
 }
 .gallery-heading::after {
   content: "";
   position: absolute;
   height: 2px;
-  width: 50%; 
+  width: 50%;
   background-color: whitesmoke;
   margin-top: 30px;
 }
 /**________page3 ends here_______**/
 
 /**_____Page3 media quary starts here_______**/
-@media (max-width:650px) {
-  .gallery-heading{
+@media (max-width: 650px) {
+  .gallery-heading {
     text-align: left;
     font-size: 20px;
   }
@@ -467,25 +526,28 @@ color: whitesmoke;
     content: "";
     position: absolute;
     height: 2px;
-    width: 100%; 
+    width: 100%;
     background-color: black;
     margin-top: 20px;
+  }
+  .card{
+    margin: 0;
   }
 }
 /**____Page3 media quary ends here_____**/
 
 /**________Page4 starts here_______**/
-#page4{
+#page4 {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-image: url(https://indiacityblog.com/wp-content/uploads/2020/03/185289.jpg);
+  background-image: url(https://wallpapercave.com/wp/fcuObs5.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   overflow: hidden;
 }
-#page4 .gallery-heading{
+#page4 .gallery-heading {
   background-color: #292929;
   margin-bottom: 0;
   color: whitesmoke;
@@ -497,65 +559,88 @@ color: whitesmoke;
   content: "";
   position: absolute;
   height: 2px;
-  width: 100%; 
+  width: 100%;
   background-color: whitesmoke;
   /* margin-top: 50px; */
 }
-.service-container{
+.service-container {
   display: flex;
   white-space: nowrap;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 50px;
   gap: 25px;
-  background-color: rgba(0, 0, 0, 0.178);  
+  background-color: rgba(0, 0, 0, 0.178);
 }
-.service{
+.service {
   width: 47%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.295);
   backdrop-filter: blur(5px);
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   text-wrap: wrap;
-  
-  
 }
-.service p{
+.service .thumbnail {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.service p {
   color: whitesmoke;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 17px;
   text-align: left;
   margin-left: 5px;
   font-weight: 100;
 }
-.service i{
+.service i {
   color: aqua;
   font-size: 35px;
 }
 
-@media (max-width:650px) {
-  #page4 .gallery-heading{
+@media (max-width: 650px) {
+  #page4 .gallery-heading {
     background-color: black;
     margin-bottom: 0;
     color: whitesmoke;
     height: 80px;
     font-size: 20px;
   }
-  .service-container{
+  .service-container {
     padding: 10px;
   }
-  .service{
+  .service {
     width: 100vw;
   }
 }
 
-
-.modal-dialog,.modal-content{
- 
-  margin-top: 35px;
+.modal-content {
   background-color: rgba(135, 207, 235, 0.527);
   backdrop-filter: blur(3px);
-  text-align: center;
+  /* text-align: center; */
+  border-radius: 5px;
+  gap: 10px;
+}
+.modal-body .mb-3 label {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.form-check .form-check-input {
+  font-size: 15px;
+}
+.isthere {
+  margin-top: 10px;
+}
+.isthere a {
+  background-color: aliceblue;
+  padding: 2px;
   border-radius: 5px;
 }

@@ -55,7 +55,7 @@
   </head>
   <body>
     <!-- nav start here -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand logo" href="#">
         <img src="Blue and Black Minimalist Travel Agency Logo.png" alt="" />
         Travel Euphoria</a
@@ -102,7 +102,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#page4">Services</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Galary</a>
@@ -111,28 +111,151 @@
             <a class="nav-link" href="#">About</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 btns">
-          <button
-            class="btn my-2 my-sm-0"
-            type="submit"
-            data-toggle="modal"
-            data-target="#login-model"
-          >
-            Login
-          </button>
 
-          <button
-            class="btn my-2 my-sm-0"
-            type="submit"
-            data-toggle="modal"
-            data-target="#signin-model"
-          >
-            Register Now
-          </button>
-        </form>
+        <button
+          class="btn my-2 my-sm-0"
+          type="submit"
+          data-toggle="modal"
+          data-target="#login-model"
+        >
+          Login
+        </button>
+
+        <button
+          class="btn my-2 my-sm-0"
+          type="submit"
+          data-toggle="modal"
+          data-target="#signin-model"
+        >
+          Register Now
+        </button>
       </div>
     </nav>
     <!-- end of nav -->
+
+    <!-- go to home page starts here -->
+    <div title="back to top" id="go-up"><a href="#nav-bar"><i class="fa-solid fa-angle-up"></i></a></div>
+    <!-- go to home page ends here -->
+
+    <!-- login section -->
+    <div class="modal" id="login-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">Please loging</div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email id"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                  size="15"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div class="isthere">
+              Didn't have an account? please<a href="">Signin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- signin section -->
+    <div class="modal" id="signin-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">Please Signin</div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Full Name</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Mobile Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Re enter the password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <div class="isthere">
+              Already have an account? please <a href="">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login section ends here -->
 
     <!--srart of first section -->
     <section id="page1">
@@ -147,11 +270,10 @@
         <p>
           Visit Your Favourite Places <br /><span class="changetext"></span>
         </p>
-
-        <div class="book">
-          <button class="btn my-2 my-sm-0 new" type="submit">Book Now</button>
-        </div>
+        
+          <a href="#page2" class=" new " type="submit">Book Now</a>
       </div>
+      
     </section>
     <!-- end of first section -->
 
@@ -463,6 +585,12 @@
       <div class="service-container">
         <div class="service">
           <!-- hotels -->
+          <div class="thumbnail">
+            <img
+              src="https://gttp.imgix.net/224999/x/0/amanpulo-philippines-west-villa-clubhouse-high-res-13855.jpg"
+              alt="thumbnail"
+            />
+          </div>
           <p class="">
             <span><i class="fa-solid fa-hotel"></i></span> Accommodation is one
             of the most essential service offered in the tourism industry.
@@ -475,7 +603,12 @@
         </div>
         <div class="service">
           <!-- Foods and drinks -->
-
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="thumbnail"
+            />
+          </div>
           <p>
             <span><i class="fa-solid fa-utensils"></i></span> Food is an
             integral part of any trip or vacation. The tourism industry provides
@@ -486,7 +619,12 @@
         </div>
         <div class="service">
           <!-- Insurance -->
-
+          <div class="thumbnail">
+            <img
+              src="https://awardwallet.com/blog/wp-content/uploads/2016/11/Travel-Insurance-Featured.jpg"
+              alt="thumbnail"
+            />
+          </div>
           <p>
             <span><i class="fa-solid fa-user-shield"></i></span> Get the best
             travel Insurence provided by us including flight missing, baggage
@@ -495,7 +633,12 @@
         </div>
         <div class="service">
           <!-- door step services -->
-
+          <div class="thumbnail">
+            <img
+              src="https://img.freepik.com/premium-vector/safe-food-delivery-concept_23-2148559601.jpg?w=1060"
+              alt="thumbnail"
+            />
+          </div>
           <p>
             <span><i class="fa-solid fa-house-flag"></i></span> Finding out time
             from the busy schedules to submit or collect documents is
@@ -507,7 +650,12 @@
         </div>
         <div class="service">
           <!-- live support -->
-
+          <div class="thumbnail">
+            <img
+              src="https://th.bing.com/th/id/R.d160003048d7a7d8998f44e6042465bf?rik=%2bwJASh3WUjwe3g&riu=http%3a%2f%2f3.bp.blogspot.com%2f-ZSQlHuo1_pE%2fT7nWjH4w_gI%2fAAAAAAAAAU0%2fcsS3KiGZxnE%2fs1600%2flive%2bsupport.png&ehk=ulRu04EYTEVDkeFUQScJuBe7mY6Lvp%2fdFQfplDYy%2fxk%3d&risl=&pid=ImgRaw&r=0"
+              alt="thumbnail"
+            />
+          </div>
           <p>
             <span><i class="fa-solid fa-phone-volume"></i></span> Being
             available 24/7 for our prestigious clients in what we aim for where
@@ -516,7 +664,12 @@
         </div>
         <div class="service">
           <!-- car services -->
-
+          <div class="thumbnail">
+            <img
+              src="https://www.tripsavvy.com/thmb/UyfS76voGNCPHJWuvfspRKmg2Qk=/5616x3744/filters:fill(auto,1)/white-bus-crossing-the-alpes-157526603-53b7ac4061de4ca4a6bf3146c4ee2d41.jpg"
+              alt="thumbnail"
+            />
+          </div>
           <p>
             <span> <i class="fa-solid fa-car"></i></span> One of the most
             crucial aspects of any trip is transportation. The tourism industry
@@ -529,25 +682,6 @@
       </div>
     </section>
     <!-- page4 ends here -->
-
-    <!-- login section -->
-    <div class="modal" id="login-model">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">loging form</div>
-          <div class="modal-body">form login data will be here</div>
-        </div>
-      </div>
-    </div>
-    <!-- signin section -->
-    <div class="modal" id="signin-model">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">signin form</div>
-          <div class="modal-body">signin data will be here</div>
-        </div>
-      </div>
-    </div>
 
     <script src="logic.js"></script>
   </body>
