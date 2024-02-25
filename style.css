@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb {
   height: 40px;
   width: 40px;
   position: fixed;
-  margin-left: 95%;
+  margin-left: 95vw;
   margin-top: 70vh;
   box-shadow: 0px 5px 10px #292929;
   display: flex;
@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
     width: 40px;
     position: fixed;
-    margin-left: 92%;
+    margin-left: 92vw;
     margin-top: 70vh;
     box-shadow: 0px 5px 10px #292929;
     display: flex;
@@ -81,9 +81,8 @@ body::-webkit-scrollbar-thumb {
 }
 @media (max-width:650px) {
   #go-up{
-    
     position: fixed;
-    margin-left: 85%;
+    margin-left: 85vw;
     margin-top: 65vh;
   }
 }
@@ -510,9 +509,13 @@ label {
   content: "";
   position: absolute;
   height: 2px;
-  width: 50%;
+  width: 0%;
   background-color: whitesmoke;
   margin-top: 30px;
+  transition: all ease 3s;
+}
+#page3:hover .gallery-heading::after{
+  width: 100%;
 }
 /**________page3 ends here_______**/
 
@@ -526,9 +529,12 @@ label {
     content: "";
     position: absolute;
     height: 2px;
-    width: 100%;
-    background-color: black;
+    width: 0%;
     margin-top: 20px;
+    transition: all ease 1.5s;
+  }
+  #page3:hover .gallery-heading::after{
+    width: 100%;
   }
   .card{
     margin: 0;
@@ -559,9 +565,12 @@ label {
   content: "";
   position: absolute;
   height: 2px;
-  width: 100%;
+  width: 0%;
   background-color: whitesmoke;
-  /* margin-top: 50px; */
+  transition: all ease 2s;
+}
+#page4:hover .gallery-heading::after{
+  width: 100%;
 }
 .service-container {
   display: flex;
@@ -633,14 +642,22 @@ label {
   font-size: 17px;
   font-weight: 600;
 }
+.modal-body input{
+  box-shadow: 0px 1px 7px #433;
+}
 .form-check .form-check-input {
   font-size: 15px;
 }
 .isthere {
   margin-top: 10px;
+  font-weight: 700;
 }
 .isthere a {
-  background-color: aliceblue;
+  text-shadow: 2px 2px 5px black;
   padding: 2px;
   border-radius: 5px;
+  color: snow;
+}
+.sign, .login{
+  box-shadow: 0px 2px  5px  black;
 }

@@ -22,21 +22,31 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -75,17 +85,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
+            <a class="nav-link" href="#nav-bar"
               >Home<span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Book</a>
+            <a class="nav-link" href="#page2">Book</a>
           </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link"
-              href="#"
+              href="#page3"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -94,7 +104,7 @@
               Packages
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">India</a>
+              <a class="dropdown-item" href="#india">India</a>
               <a class="dropdown-item" href="#">United State</a>
               <a class="dropdown-item" href="#">United Kingdom</a>
               <a class="dropdown-item" href="#">France</a>
@@ -134,56 +144,43 @@
     <!-- end of nav -->
 
     <!-- go to home page starts here -->
-    <div title="back to top" id="go-up"><a href="#nav-bar"><i class="fa-solid fa-angle-up"></i></a></div>
+    <div title="back to top" id="go-up">
+      <a href="#nav-bar"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
     <!-- go to home page ends here -->
 
     <!-- login section -->
     <div class="modal" id="login-model">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">Please loging</div>
+          <div class="modal-header"><h5>Please loging</h5></div>
           <div class="modal-body">
             <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Email id"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
+              <div class="form-group">
+                <div class="mb-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Id"
+                  />
                 </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary login">
+                  Login
+                </button>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                  size="15"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check out</label
-                >
-              </div>
-              <button type="submit" class="btn btn-primary">Login</button>
             </form>
             <div class="isthere">
-              Didn't have an account? please<a href="">Signin</a>
+              Didn't have an account? please
+              <a href="#signin-model" data-toggle="modal" data-dismiss="modal"
+                >Signin</a
+              >
             </div>
           </div>
         </div>
@@ -193,63 +190,59 @@
     <div class="modal" id="signin-model">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">Please Signin</div>
+          <div class="modal-header"><h5>Please Signin</h5></div>
           <div class="modal-body">
             <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Full Name</label
-                >
-                <input type="text" class="form-control" />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Mobile Number</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
+              <div class="form-group">
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Full Name"
+                  />
                 </div>
+                <div class="mb-4">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Contact Number"
+                  />
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Id"
+                    id="email-id"
+                  />
+                  <div id="" class="form-text">
+                    <p id="emailtext">We'll never share your email with anyone else.</p>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="re-enter Password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary sign">
+                  Sign in
+                </button>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Re enter the password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
             <div class="isthere">
-              Already have an account? please <a href="">Login</a>
+              Already have an account? please
+              <a href="#login-model" data-toggle="modal" data-dismiss="modal"
+                >Login</a
+              >
             </div>
           </div>
         </div>
@@ -270,10 +263,9 @@
         <p>
           Visit Your Favourite Places <br /><span class="changetext"></span>
         </p>
-        
-          <a href="#page2" class=" new " type="submit">Book Now</a>
+
+        <a href="#page2" class="new" type="submit">Book Now</a>
       </div>
-      
     </section>
     <!-- end of first section -->
 
@@ -321,7 +313,7 @@
               type="date"
               value=""
               name=""
-              id=""
+              id="start"
               required
             />
 
@@ -331,7 +323,7 @@
               type="date"
               value=""
               name=""
-              id=""
+              id="end"
               required
             />
 
@@ -359,10 +351,10 @@
     <!-- end of page2 -->
 
     <!-- page3 starts hete -->
-    <section id="page3">
+    <section id="page3" class="container-fluid">
       <h2 class="gallery-heading">Package Gallery</h2>
       <div id="package">
-        <div class="card" style="width: 18rem">
+        <div class="card" id="india" style="width: 18rem">
           <img
             src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg"
             class="card-img-top"
@@ -682,7 +674,36 @@
       </div>
     </section>
     <!-- page4 ends here -->
+    <script>
+      $(document).ready(function () {
+        $("#email-id").keyup(function () {
+          if (mailCheck()) {
+            $("#emailtext").text("Valid email").css({"color": "green"})
+            $("#email-id").css("border", "2px solid green");
+            
+          } else {
+            $("#emailtext").text("Not a Valid email!").css("color","red")
+            $("#email-id").css("border", "2px solid red");
+            
+          }
+        });
 
+        function mailCheck() {
+          let mailData = $("#email-id").val();
+          let mailPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
+          if (mailPattern.test(mailData)) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        
+
+
+      });
+    </script>
     <script src="logic.js"></script>
   </body>
 </html>
