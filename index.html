@@ -105,10 +105,10 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#india">India</a>
-              <a class="dropdown-item" href="#">United State</a>
-              <a class="dropdown-item" href="#">United Kingdom</a>
-              <a class="dropdown-item" href="#">France</a>
-              <a class="dropdown-item" href="#">Germany</a>
+              <a class="dropdown-item" href="#us">United State</a>
+              <a class="dropdown-item" href="#australia">Australia</a>
+              <a class="dropdown-item" href="#france">France</a>
+              <a class="dropdown-item" href="#germany">Germany</a>
             </div>
           </li>
           <li class="nav-item">
@@ -224,14 +224,18 @@
                     type="password"
                     class="form-control"
                     placeholder="Password"
+                    id="password"
                   />
+                  <p id="pw-text"></p>
                 </div>
                 <div class="mb-4">
                   <input
                     type="password"
                     class="form-control"
                     placeholder="re-enter Password"
+                    id="repassword"
                   />
+                  <p id="repw-text"></p>
                 </div>
                 <button type="submit" class="btn btn-primary sign">
                   Sign in
@@ -277,10 +281,8 @@
         </div>
         <div class="booking-info">
           <form action="">
-            <label for="exampleDataList" class="form-label">Where to</label>
             <select
               class="form-select first-input"
-              aria-label="Default select example"
               required
             >
               <option value="">Select where you want to go</option>
@@ -305,6 +307,9 @@
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
+              <option value="4">four</option>
+              <option value="5">five</option>
+
             </select>
 
             <label for="">Start date</label>
@@ -333,7 +338,7 @@
                 class="form-control fifth-input"
                 placeholder="Leave a comment here"
                 id="floatingTextarea"
-                rows="1"
+                rows="3"
                 minlength="50"
                 maxlength="500"
                 required
@@ -378,7 +383,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="france" style="width: 18rem">
           <img
             src="https://th.bing.com/th/id/OIP.DB8eOk1y4SdWgM7GqkCx2gHaE7?pid=ImgDet&w=384&h=256&rs=1"
             class="card-img-top"
@@ -402,7 +407,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="india" style="width: 18rem">
           <img
             src="https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=384&h=256&c=7&r=0&o=5&pid=1.7"
             class="card-img-top"
@@ -426,7 +431,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="swis" style="width: 18rem">
           <img
             src="https://journeyz.co/wp-content/uploads/2020/08/Basel-2048x1365.jpg"
             class="card-img-top"
@@ -449,7 +454,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="us" style="width: 18rem">
           <img
             src="https://www.thewowstyle.com/wp-content/uploads/2015/03/Chicago-Illinois.jpg"
             class="card-img-top"
@@ -473,7 +478,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="germany" style="width: 18rem">
           <img
             src="https://lp-cms-production.imgix.net/2021-06/GettyRF_465892570.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3"
             class="card-img-top"
@@ -497,7 +502,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="india" style="width: 18rem">
           <img
             src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg"
             class="card-img-top"
@@ -521,7 +526,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="australia" style="width: 18rem">
           <img
             src="https://th.bing.com/th/id/OIP.SPdTDr-xJh5tA9tGYkK48gHaE8?rs=1&pid=ImgDetMain"
             class="card-img-top"
@@ -544,7 +549,7 @@
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card" id="us" style="width: 18rem">
           <img
             src="https://th.bing.com/th/id/OIP.9FHZ19x0A-4-yJfTMblEPwHaE8?rs=1&pid=ImgDetMain"
             class="card-img-top"
@@ -699,7 +704,43 @@
           }
         }
 
+        $("#password").keyup(function (){
+          if(passwordCheck()){
+            $("#pw-text").text("password is correct")
+          }
+          else{
+            $("#pw-text").text("password should contain alphabates (A-Z),(a-z),numbers (0-9),special characters (#?!@$%^&*-) and within range (8-16)")
+          }
+        })
+
+
         
+
+        function passwordCheck(){
+          let passwordData = $("#password").val();
+          let passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/;
+          
+          if(passwordPattern.test(passwordData)){
+            return true
+          }
+          else{
+            return false;
+          }
+          return passwordData;
+        }
+
+        $("#repassword").keyup(function(){
+          let passwordData = $("#password").val();
+          let repasswordData = $("#repassword").val();
+
+          if(passwordData == repasswordData){
+            $("#repw-text").text("password verified")
+          }
+          else{
+            $("#repw-text").text("password is not correct")
+          }
+
+        });
 
 
       });
