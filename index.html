@@ -321,6 +321,7 @@
               id="start"
               required
             />
+            <p id="start-dt"></p>
 
             <label for="">End date</label>
             <input
@@ -331,6 +332,7 @@
               id="end"
               required
             />
+            <p id="end-dt"></p>
 
             <div class="form-floating">
               <label for="floatingTextarea">Description</label>
@@ -338,7 +340,7 @@
                 class="form-control fifth-input"
                 placeholder="Leave a comment here"
                 id="floatingTextarea"
-                rows="3"
+                rows="2"
                 minlength="50"
                 maxlength="500"
                 required
@@ -358,6 +360,7 @@
     <!-- page3 starts hete -->
     <section id="page3" class="container-fluid">
       <h2 class="gallery-heading">Package Gallery</h2>
+      <hr>
       <div id="package">
         <div class="card" id="india" style="width: 18rem">
           <img
@@ -485,7 +488,7 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Visit Gernamy</h5>
+            <h5 class="card-title">Visit Germany</h5>
             <p class="card-text">
               Germany, or Deutschland as the locals call it, is a captivating
               country with a rich tapestry of history, culture, and natural
@@ -579,6 +582,7 @@
     <!-- page4 starts here -->
     <section id="page4">
       <h2 class="gallery-heading">Value Added Services</h2>
+      <hr>
       <div class="service-container">
         <div class="service">
           <!-- hotels -->
@@ -742,8 +746,16 @@
 
         });
 
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
 
-      });
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#start').attr('min',today);
+    $('#end').attr('min',today);
+    
+    });
     </script>
     <script src="logic.js"></script>
   </body>

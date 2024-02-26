@@ -340,7 +340,6 @@ section p {
 #bookings {
   width: 100%;
   height: 100%;
-  background-color: #87cfeb83;
   box-shadow: 0px 0px 5px #c5c5c5;
   display: flex;
   justify-content: space-between;
@@ -386,6 +385,7 @@ select {
   border: grey;
   border-radius: 5px;
   background-color: aqua;
+  box-shadow: 0px 1px 5px black;
 }
 .form-floating textarea {
   height: 50px;
@@ -398,6 +398,7 @@ input {
   border: none;
   border-radius: 5px;
   background-color: aqua;
+  box-shadow: 0px 1px 5px black;
 }
 label {
   margin-top: 10px;
@@ -414,7 +415,7 @@ label {
   transition: all ease 0.5s;
 }
 .book-btn:hover {
-  box-shadow: -2px 2px black;
+  box-shadow: -3px 3px black;
 }
 .form-floating {
   margin-top: 20px;
@@ -471,8 +472,8 @@ label {
 }
 .card-text {
   font-family: "Courier New", Courier, monospace;
-  text-align: left;
-  font-size: 12px;
+  text-align: justify;
+  font-size: 13px;
   color: black;
 }
 .card {
@@ -501,43 +502,48 @@ label {
   font-size: 12px;
 }
 .gallery-heading {
+  margin-top: 25px;
   text-align: center;
-  margin-bottom: 20px;
   color: whitesmoke;
 }
-.gallery-heading::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  background-color: whitesmoke;
-  margin-top: 30px;
-  transition: all ease 3s;
+hr{
+  align-self: center;
+  background-color: #fff;
+  width: 350px;
+  height: 1.5px;
+  animation: hranime 2s infinite ease-in-out alternate-reverse;
 }
-#page3:hover .gallery-heading::after{
-  width: 100%;
+@keyframes hranime {
+  0%{
+    width: 50px;
+  }
+  100%{
+    width: 400px;
+  }
 }
+
 /**________page3 ends here_______**/
 
 /**_____Page3 media quary starts here_______**/
 @media (max-width: 650px) {
   .gallery-heading {
-    text-align: left;
+    text-align: center;
     font-size: 20px;
   }
-  .gallery-heading::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0%;
-    margin-top: 20px;
-    transition: all ease 1.5s;
-  }
-  #page3:hover .gallery-heading::after{
-    width: 100%;
+
+  @keyframes hranime {
+    0%{
+      width: 50px;
+    }
+    100%{
+      width: 250px;
+    }
   }
   .card{
     margin: 0;
+  }
+  hr{
+    max-width: 250px;
   }
 }
 /**____Page3 media quary ends here_____**/
@@ -552,25 +558,6 @@ label {
   background-size: cover;
   position: relative;
   overflow: hidden;
-}
-#page4 .gallery-heading {
-  background-color: #292929;
-  margin-bottom: 0;
-  color: whitesmoke;
-  height: 80px;
-  /* line-height: 80px; */
-  padding: 25px;
-}
-#page4 .gallery-heading::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  background-color: whitesmoke;
-  transition: all ease 2s;
-}
-#page4:hover .gallery-heading::after{
-  width: 100%;
 }
 .service-container {
   display: flex;
@@ -616,10 +603,7 @@ label {
 
 @media (max-width: 650px) {
   #page4 .gallery-heading {
-    background-color: black;
-    margin-bottom: 0;
     color: whitesmoke;
-    height: 80px;
     font-size: 20px;
   }
   .service-container {
