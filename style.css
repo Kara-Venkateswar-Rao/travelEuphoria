@@ -482,9 +482,10 @@ input {
   color: black;
 }
 .card {
+  
   margin-right: 25px;
   padding: 2px;
-  box-shadow: 0px 2px 5px black;
+  box-shadow: 0px 2px 5px #ddd;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -702,7 +703,7 @@ hr{
   height: calc(var(--div-height) - 20vh);
  }
 
- img{
+ .Gallery img{
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -712,7 +713,7 @@ hr{
   border-radius: 10px;
   cursor: pointer;
  }
- img:hover{
+ .Gallery img:hover{
   scale: 1.01;
  }
 
