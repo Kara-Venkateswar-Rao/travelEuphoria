@@ -153,7 +153,7 @@
     <div class="modal" id="login-model">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header"><h5>Please loging</h5></div>
+          <div class="modal-header"><h5>Please log in</h5></div>
           <div class="modal-body">
             <form>
               <div class="form-group">
@@ -162,6 +162,7 @@
                     type="email"
                     class="form-control"
                     placeholder="Email Id"
+                    required
                   />
                 </div>
                 <div class="mb-4">
@@ -169,10 +170,11 @@
                     type="password"
                     class="form-control"
                     placeholder="password"
+                    required
                   />
                 </div>
-                <button type="submit" class="btn btn-primary login">
-                  Login
+                <button type="submit" class="btn btn-primary  login">
+                  Log in
                 </button>
               </div>
             </form>
@@ -199,6 +201,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Full Name"
+                    required
                   />
                 </div>
                 <div class="mb-4">
@@ -206,7 +209,20 @@
                     type="number"
                     class="form-control"
                     placeholder="Contact Number"
+                    required
                   />
+                </div>
+                <div class="mb-4">
+                  <label for="">Date Of Birth</label>
+                  <input type="date" name="dob" required />
+                </div>
+                <div class="mb-4">
+                  <select name="" id="" required>
+                    <option value="">--Gender--</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
+                  </select>
                 </div>
                 <div class="mb-4">
                   <input
@@ -214,6 +230,7 @@
                     class="form-control"
                     placeholder="Email Id"
                     id="email-id"
+                    required
                   />
                   <div id="" class="form-text">
                     <p id="emailtext">
@@ -226,6 +243,7 @@
                     type="password"
                     class="form-control"
                     placeholder="Password"
+                    required
                     id="password"
                   />
                   <p id="pw-text"></p>
@@ -236,6 +254,7 @@
                     class="form-control"
                     placeholder="re-enter Password"
                     id="repassword"
+                    required
                   />
                   <p id="repw-text"></p>
                 </div>
@@ -247,7 +266,7 @@
             <div class="isthere">
               Already have an account? please
               <a href="#login-model" data-toggle="modal" data-dismiss="modal"
-                >Login</a
+                >Log in</a
               >
             </div>
           </div>
@@ -870,10 +889,11 @@
           the complete tours & travels solution. Travel Euphoria features the
           most amazing sights around the world within the budget divided into
           various “best of” lists. I enjoy traveling the world so why not you,
-          come join us and have a great deals on travel packages. The destinations
-          can be anything from landscapes, beaches, ancient monuments, islands,
-          wildlife, countries and anything else that is interesting. we provide
-          best possible deals on Tours and Travels to choose one.
+          come join us and have a great deals on travel packages. The
+          destinations can be anything from landscapes, beaches, ancient
+          monuments, islands, wildlife, countries and anything else that is
+          interesting. we provide best possible deals on Tours and Travels to
+          choose one.
         </p>
       </div>
 
