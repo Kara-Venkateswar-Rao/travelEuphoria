@@ -11,3 +11,14 @@ function onSubmit() {
     alert("Booking Successfull");
   }
 }
+
+const scrollToTop = document.querySelector('#go-up')
+
+window.onscroll = function scroll(){
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ){
+    scrollToTop.style.display = 'initial'
+  }
+  else{
+    scrollToTop.style.display = 'none'
+  }
+}
